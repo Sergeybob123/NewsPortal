@@ -1,6 +1,6 @@
 
 {% extends 'default.html' %}
-
+{% load custom_filters %}
 
 
 {% block content %}
@@ -14,8 +14,8 @@
     </tr>
     <tr>
         <td>{{ post.title }}</td>
-        <td>{{ post.time_in }}</td>
-        <td>{{ post.text }}</td>
+        <td>{{ post.time_in|date:'d M Y' }}</td>
+        <td>{{ post.text|censor }}</td>
         {% for cat in post.category.all %}
         <td>{{ cat.name }}</td>
         {% endfor %}
