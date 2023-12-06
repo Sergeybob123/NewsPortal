@@ -1,1 +1,1 @@
-This project was created while i was studying in SkillFactory
+This project is created while i was studying in SkillFactory
